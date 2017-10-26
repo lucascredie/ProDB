@@ -1,3 +1,152 @@
-h1 {
-	color: red;
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+:root {
+    --main-red: #ff5252;
+    --main-blue: #55a6ff;
+    --main-grey: #303030;
+   
 }
+body { margin: 0px; }
+
+nav {
+    background-color: var(--main-grey);
+    height: 50px;  
+}
+#headerLogoTitle {
+    margin: 3px 0px 0px 20px;
+    display: inline-block;
+    
+}
+
+#headerLogo {
+    height: 30px;
+    transform: rotateZ(-25deg) translateY(10px);
+    
+}
+#homeButton {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 1.3em;
+    transition: 1000ms;
+}
+#headerLogoTitle:hover #homeButton{
+    color: var(--main-blue);
+    transition: 200ms;
+}
+
+#infoButton {
+    float: right;
+    margin: 12px 30px 0px 0px;
+    color: white;
+    font-size: 1.5em;
+    /* transition: 300ms; */
+}
+#infoButton:hover {
+   color: var(--main-red);
+   transition: 300ms;
+}
+.red {color: var(--main-red);}
+
+/* logo goes inside*/
+    .logoBox {
+        height: 100px;
+        width: 200px;
+        display: block;
+        margin: 120px auto 50px auto;
+    }
+/* --------------- */
+#mainContent {
+    position: absolute;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px; 
+}
+
+#searchBar {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    display: block;
+    height: 30px;
+    width: 310px;
+    margin: 0px auto;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #6e6e6e;
+    color: var(--main-grey);
+    border-radius: 2px;
+    box-shadow: 0px 12px 30px -12px rgba(0,0,0,0.2);
+}
+
+#submitButton {
+    transition: 200ms;
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    font-size: 1.1em;
+    background:var(--main-red); 
+    display: block;
+    border:0 none;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; 
+    margin: 20px auto 0px auto;
+    box-shadow: 0px 12px 30px -12px rgba(0,0,0,0.2);  
+}
+
+#submitButton:hover {
+    background:var(--main-blue); 
+    color:white;
+    transition: 200ms;
+    transform: translateY(-3px);
+}
+
+/* _______ABOUT PAGE_________ */
+#aboutContent {
+    /* height: 350px; */
+    width: 60%;
+    margin: 50px auto 0px auto;
+    padding: 25px;
+    box-shadow: 
+    0px 12px 30px -15px rgba(0,0,0,0.4);
+   
+}
+#aboutTitle {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 0px;
+    /* font-size: 4em;   */
+}
+.sp {
+    display: block;
+    font-weight: 900;
+}
+.sp1 {
+    font-size: 1em;
+    color: #999999;
+}
+.sp2 {
+    font-size: 1.4em;
+    text-transform: uppercase; 
+    color: #7e7e7e;
+}
+.sp3 {
+    font-size: 1.6em; 
+    text-transform: uppercase;
+    color: #5e5e5e;
+}
+#aboutHR {
+    border: 2px solid var(--main-red);
+}
+.aboutParagraph {
+    color: #5e5e5e;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-size: 2em;
+}
+
+
+/* __________________________ */

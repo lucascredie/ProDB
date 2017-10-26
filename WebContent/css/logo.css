@@ -1,0 +1,106 @@
+
+.cls-1,.cls-2,.cls-3,.cls-4 {
+    /* all paths stroke */
+    stroke:#303030;
+    stroke-miterlimit:10;
+    stroke-width:5px;
+    animation-name: lines;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+  .cls-1{
+  /* main paths */
+    fill-opacity: 0;
+  }
+  .cls-2 {
+  /* oxigen - red ball */
+    fill:#ff5252;
+  }
+  .cls-3{
+    /* nitrogen - blue ball */
+    fill:#55a6ff;
+  }
+  .cls-4{
+    /* hidrogen - grey ball */
+    fill:#d3d3d3;
+  } 
+  
+  #Logo {
+    transform: rotateZ(-15deg);
+    animation-name: fullBody;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes fullBody {
+    0% {
+      stroke-width:3px;
+      opacity: 0;
+      transform: rotateZ(-45deg) rotateY(85deg);
+    }
+  }
+  @keyframes normalize {
+    0% {
+      stroke-width:3px;
+      transform: 
+        rotateX(90deg) 
+        scale(0.8, 0.8);
+    }
+  }
+  
+  @keyframes hidroIn {
+    0% {
+      transform: scale(0.0, 0.0);
+      background: red;
+      stroke-width: 1px;
+      
+    }
+    70%{
+      transform: scale(0.0, 0.0);
+    }
+    100% {
+    transform: scale(1, 1);
+    }
+  }
+  
+  #hidro1, #hidro2, #hidro3 {
+    
+    transform-origin: 10% 10%;
+    animation-name: hidroIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forward;
+  }
+  
+  .nrm {
+    transform-origin: 50% 50%;
+    animation-name: normalize;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+  
+  .line1, .line2 {
+    transform: rotateZ(180deg);
+    transform-origin: 50% 50%;
+    animation-name: lines;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    
+  }
+  .line1 {
+    transform: translateY(4px);
+  }
+  @keyframes lines {
+    from {
+      stroke-dasharray: 50;
+    }
+    to {
+      stroke-dasharray: 500;
+    }
+  }
+  
+  
+  
+  
+  
+  

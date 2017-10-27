@@ -1,5 +1,3 @@
 # Pro DB
-ok
-test 2
-tes 3
-### Lucas Credit, Kieran Gordon and Chad Roemer
+## Lucas Credie, Kieran Gordon and Chad Roemer
+### ProDB is an online application that aims to help Biology professors and students with protein related research.

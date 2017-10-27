@@ -8,9 +8,11 @@
 <%@ page import="javaProject.*" %>
 	
 	<%  
-		myServlet servlet = new myServlet();
-		servlet.doGet(request, response);
+		/* myServlet servlet = new myServlet(); */
+		String proteinName = request.getParameter("searchQuery");
 	%>
+	
+	<h1 id="proteinHeader"> <%= proteinName %> </h1>
 
 </body>
 </html>

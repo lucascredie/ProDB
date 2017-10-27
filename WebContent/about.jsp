@@ -3,9 +3,7 @@
 <body>
 
 		<%@ include file="nav.html" %>  
-
-
-    
+		
         <div id="aboutContent">
         
         <h1 id="aboutTitle"> <span class="sp1 sp">About:</span> <span class="sp2 sp">Protein</span> <span class="sp3 sp">Database</span></h1>

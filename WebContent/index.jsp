@@ -11,7 +11,7 @@
         </div>
         
     		<!-- FORM -->
-        <form action="protein.jsp" action="GET">
+        <form action="CentralServlet" action="GET">
             <input type="text" name="searchQuery" id="searchBar" placeholder="Search protein..." required="true">
             <input type="submit" id="submitButton" value="GO!">
         </form>

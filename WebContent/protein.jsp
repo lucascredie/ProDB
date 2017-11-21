@@ -13,6 +13,12 @@
 	%>
 	
 	<h1 id="proteinHeader"> <%= proteinName %> </h1>
+	
+	<%  
+		/* myServlet servlet = new myServlet(); */
+		CentralServlet serv = new CentralServlet();
+		serv.doGet(request, response);
+	%>
 
 </body>
 </html>

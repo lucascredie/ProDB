@@ -1,5 +1,5 @@
 package javaProject;
-import javaProject.DBI;
+import javaProject.Dbi;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -14,19 +14,21 @@ public class CentralServlet extends HttpServlet {
 
 public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 	response.setContentType("text/html");
-	response.sendRedirect("protein.jsp");
 	PrintWriter out = response.getWriter();
-	
 	ProteinProcessor pp;
-	String requestedProtein = request.getParameter("searchQuery");
-	ResultSet protein = DBI.fetchProtein(requestedProtein);
+	String requestedProtein = request.getParameter("searchQuery").toLowerCase();
+	ResultSet protein = Dbi.fetchProtein(requestedProtein);
+	
 	try {
-		pp = new ProteinProcessor(protein.getString("name"));
+		protein.next();
+		out.println("<html>"+ protein.getString("gene_loc")+"</html>");
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		System.out.println("here i am");
 		e.printStackTrace();
 	}
+	
+	
 		
 		
 		

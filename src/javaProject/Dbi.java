@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 
-public class DBI {
+public class Dbi {
 		static Connection dbconn;
 		ResultSet results = null;
 		static PreparedStatement sql;

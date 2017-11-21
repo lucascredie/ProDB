@@ -23,8 +23,6 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 	out.print("<h1>" + request.getParameter("searchQuery") + "</h1>");
 		
 	}
-
-
 }
 
 

@@ -4,8 +4,8 @@
 -- ------------------------------------------------------
 -- Server version	5.7.19
 
--- CREATE DATABASE prot_db;
--- USE prot_db;
+ CREATE DATABASE prot_db;
+ USE prot_db;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -272,3 +272,4 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2017-11-15 17:55:43
+SELECT sequence FROM protein NATURAL JOIN sequence WHERE name = 'actin';

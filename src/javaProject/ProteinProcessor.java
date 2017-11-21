@@ -25,33 +25,12 @@ public class ProteinProcessor {
 		hm.put("M", M); hm.put("P", P); hm.put("F", F); hm.put("W", W); hm.put("S", S);
 		hm.put("T", T); hm.put("N", N); hm.put("Q", Q); hm.put("Y", Y); hm.put("C", C);
 		hm.put("R", R); hm.put("H", H); hm.put("K", K); hm.put("E", E); hm.put("D", D);
-		String[] sequence = seq.split("");
+		String[] sequence = seq.toUpperCase().split("");
 		
 		for (int i = 0; i < sequence.length; i++) {
 			//System.out.print(i + " ");
 			hm.get(sequence[i]).add(i);
 			seqlength++;
-		}
-		for (int i = 0; i < aminoKeys.length; i++) {
-			ArrayList<Integer> a = hm.get(aminoKeys[i]);
-			if (!a.isEmpty()) {
-			System.out.print(aminoKeys[i] + " = " + "[");
-			}
-			for (int j = 0; j < a.size(); j++) {
-				if(a.isEmpty()) {
-					break;
-				}
-				else if (j == (a.size() - 1)) {
-					System.out.print(a.get(j));
-				}
-				else {
-					System.out.print(a.get(j) + ", ");
-				}
-			}
-			if (!a.isEmpty()) {
-				System.out.print("] \n");
-			}
-			
 		}
 		
 	}
@@ -61,6 +40,7 @@ public class ProteinProcessor {
 		for (int i =0; i < seqlength; i++) {
 			if( i >= 10 && i%10 == 0) {
 				result += " ";
+				
 			}
 			if( i >= 60 && i%60 == 0) {
 				result += "\n";

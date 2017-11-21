@@ -22,12 +22,14 @@
 			 geneLoc  = rs.getString("gene_loc");
 			 
 			 seq = rsSeq.getString("sequence");
-			 ProteinProcessor pp = new ProteinProcessor(seq);
-			 formattedSeq = pp.toString();
+			 
+			  ProteinProcessor pp = new ProteinProcessor(seq);
+			 formattedSeq = pp.toString(); 
 			 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
+			System.out.println(e.getMessage());
 		}
 %>
 <%@ include file="head.jsp" %>  
@@ -35,12 +37,18 @@
 <body>
 
 <%@ include file="nav.html" %>   
-	<h1 id="proteinHeader"> <%= name %> </h1>
-	<h1 id="proteinHeader"> <%= local %> </h1>
-	<h1 id="proteinHeader"> <%= molWeight %> </h1>
-	<h1 id="proteinHeader"> <%= type %> </h1>
-	<h1 id="proteinHeader"> <%= geneLoc %> </h1>
-	<p> <%= formattedSeq %> </p> 
+	
+	<h1 id="proteinHeader"><%=name %></h1>
+	<h1 id="proteinHeader"><%=local %></h1>
+	<h1 id="proteinHeader"><%=molWeight %></h1>
+	<h1 id="proteinHeader"><%=type %></h1>
+	<h1 id="proteinHeader"><%=geneLoc %></h1>
+	<input type="text" id="sequence-query" placeholder="Find Motif..."><br>
+	<pre id="formatted-sequence"><code id="inner-pre-text"><%=formattedSeq%></code></pre> 
+	<div id="search-test">
+		
+	</div>
+	
 
 </body>
 </html>

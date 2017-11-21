@@ -149,7 +149,15 @@ nav {
 }
 
 /* _______PROTEIN PAGE_________ */
+pre {
+	margin: auto;
+	padding: 0px;
+	width: 400px;	
+}
 
+.highlight-span {
+	background-color: var(--main-blue);
+}
 
 
 /* __________________________ */

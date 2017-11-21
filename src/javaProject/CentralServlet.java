@@ -39,6 +39,17 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 	doPost(request, response);
 		
 	}
+
+public String buildProteinPage(String name, String b, String c, String d, String e, String f, String g) {
+	StringBuilder sb = new StringBuilder();
+	
+	
+	
+	
+	return sb.toString();
 }
+}
+
+
 
 

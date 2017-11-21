@@ -43,6 +43,21 @@ public class Dbi {
 				return null;
 			}
 		}
+		
+		public static  ResultSet fetchProteinSeq(String protName) {
+			try {
+				String selectProt = "SELECT sequence FROM prot_db.protein NATURAL JOIN prot_db.sequence WHERE name = ?";
+				dbconn = newConnection();
+				sql = dbconn.prepareStatement(selectProt);
+				sql.setString(1, protName);
+				ResultSet results = sql.executeQuery();
+				return results;
+			} catch (Exception err) {
+				System.out.println("it is a database connection problem");
+				System.out.println(err.getMessage());
+				return null;
+			}
+		}
 
 	}
 

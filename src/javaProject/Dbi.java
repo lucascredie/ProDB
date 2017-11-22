@@ -17,7 +17,7 @@ public class Dbi {
 				Class.forName("com.mysql.jdbc.Driver").newInstance();
 
 				try {
-					dbconn = DriverManager.getConnection(dbPath, "root", "GBP@ck3rs#1");
+					dbconn = DriverManager.getConnection(dbPath, "root", "Leoandblue18");
 					System.out.println("gain the connection");
 					return dbconn;
 				} catch (Exception s) {

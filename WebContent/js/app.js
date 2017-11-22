@@ -33,25 +33,37 @@ function findInSequence() {
 	var i = 0;
 while (endMatch < seq.length){
 	endMatch = beginMatch + searchMotif.length;
-	currentlyChecked = seq.substring(beginMatch, endMatch);
+	var currentlyChecked = seq.substring(beginMatch, endMatch);
 	//check for spaces or new lines within the search portion of the sequence
 //console.log(searchMotif);
-	if(searchMotif.length > 3){
-		for (var i = 0; i < currentlyChecked.length; i++){
-			var chari = currentlyChecked.charAt(i);
-			console.log(i + ": " + "chari = " + chari);
-			if(chari == " "){
-				searchMotif.split("").splice(i, 0, " ").join("");
-				console.log(searchMotif);
-			}
-			else {
-				searchMotif.split("").splice(i, 0, "\n").join("");
-			}
-			
-		}
-		}
+//	if (currentlyChecked.length > 1){
+//		for (i = 0; i < currentlyChecked.length; i++){
+	if(currentlyChecked.length > 2){
+		var chars = currentlyChecked.split("");
+		console.log(chars);
+	}
+//			if(chars[i] === " "){
+//				var splitter = searchMotif.split("");
+//				splitter.splice(i, 0, " ");
+//				searchMotif = splitter.join("");
+//				console.log(searchMotif);
+//			}
+//			else if (chars[i] === "\n") {
+//				var splitter = searchMotif.split("");
+//				splitter.splice(i, 0, "\n");
+//				searchMotif = splitter.join("");
+//				console.log(searchMotif);
+//			}
+//			
+//		}
+	//}
 	//
-	if(currentlyChecked == searchMotif){
+//	var test = "ab c";
+//	var splt = test.split("");
+//	splt.splice(1, 0, " ")
+//	test = splt.join("")
+//	console.log(test);
+	if(currentlyChecked === searchMotif){
 		var indices = [beginMatch, endMatch];
 		indicesOfMatches.push(indices);
 		beginMatch = endMatch;

@@ -214,12 +214,17 @@ nav {
 }
 
 .content {
-/* 	padding: 5px; */
+	padding-left: 10px;
 	
 }
 
 #sequence-query {
-	color: red;
+	width: 60%;
+	height: 30px;
+	font-size: 1.2em;
+	display: block;
+	margin: 10px auto;
+	padding: 2px 15px;
 }
 
 #sequence-query:focus {

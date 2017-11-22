@@ -52,9 +52,12 @@ public class ProteinProcessor {
 		return result;
 	}
 	
-	public int countResidue(String res) {
-		int result = hm.get(res.toUpperCase()).size();
-		return result;
+	public int[] getResidueCounts() {
+		int[] results = new int[20];
+		for ( int i = 0; i < hm.size(); i ++) {
+			results[i] = hm.get(aminoKeys[i]).size();
+		}
+		return results;
 	}
 	
 	

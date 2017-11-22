@@ -161,6 +161,19 @@ pre {
 	border-color: var(--main-blue);
 }
 
+table {
+	border: solid;
+}
+tr {
+	border:solid;
+}
+th{
+	border:solid;
+}
+td{
+	border:solid;
+}
+
 
 /* __________________________ */
 

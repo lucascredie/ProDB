@@ -156,7 +156,9 @@ pre {
 }
 
 .highlight-span {
-	background-color: var(--main-blue);
+	color: var(--main-blue);
+	border-bottom: solid;
+	border-color: var(--main-blue);
 }
 
 

@@ -45,6 +45,7 @@
 	<h1 id="proteinHeader"><%=geneLoc %></h1>
 	<input type="text" id="sequence-query" placeholder="Find Motif..."><br>
 	<pre id="formatted-sequence"><code id="inner-pre-text"><%=formattedSeq%></code></pre> 
+	<input type="hidden" id="pretag-reset" value="<%=formattedSeq%>">
 	<div id="search-test">
 		
 	</div>

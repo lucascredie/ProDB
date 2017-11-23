@@ -153,30 +153,34 @@ nav {
 /* ADDED */
 #proteinHeader {
 	text-transform: Uppercase;
+	padding-left: 10px;
 	text-align: center;
 }
 
 .proteinHeaderHR {
-	width: 320px;
-	border: 2px solid var(--main-grey);
 	
+	width: 370px;
+	border: 2px solid var(--main-grey);
+	margin-bottom: 30px;
 }
 #proteinStats {
 	text-transform: capitalize;
+	width: 350px;
+	margin: 0px auto;
 }
 
 #sideBar {
     width: 350px;
-    float: right;
     /* background: red; */
-    margin-top: 2%;
+    margin: 0px auto;
     padding: 15px;
-    margin-right: 10px;
     -webkit-box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
     -moz-box-shadow: -5px 0px 30px -9px rgba(151, 87, 87, 0.20);
     box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
-    /* border: 1px solid  rgba(0,0,0,0.30); */
+    border: 1px solid #393939; 
+  
 }
+
 #proteinWindow {
     display: block;
 }
@@ -184,6 +188,7 @@ nav {
     margin-top: 20px;
     width: 100%;
     display: flex;
+    
 }
 .Button {
     width: 90%;
@@ -214,7 +219,7 @@ nav {
 }
 
 .content {
-	padding-left: 10px;
+	
 	
 }
 
@@ -232,9 +237,10 @@ nav {
 }
 
 #sequenceBox {
-	margin: 10px 0px;
+	border: 1px solid #393939; 
+	margin: 10px auto;
 	width: 350px;
-	display: inline-block;
+	display: block;
 	padding: 10px;
 	-webkit-box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
     -moz-box-shadow: -5px 0px 30px -9px rgba(151, 87, 87, 0.20);
@@ -244,8 +250,6 @@ nav {
 pre {
 	/* margin: auto; */
 	
-	
-		
 }
 
 .highlight-span {
@@ -255,18 +259,28 @@ pre {
 }
 
 table {
-	border: solid;
+	width: 350px;
+	border: 1px solid #393939; 
+	text-align: center;
+	-webkit-box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
+    -moz-box-shadow: -5px 0px 30px -9px rgba(151, 87, 87, 0.20);
+    box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
+
 }
 tr {
-	border:solid;
-}
-th{
-	border:solid;
-}
-td{
-	border:solid;
-}
 
+}
+#table {
+	width: 350px;
+	display: block;
+	margin: 0px auto;
+
+}
+tr:nth-child(even) {
+	/* border:solid; */
+	background: #f2f2f2;
+	
+}
 
 /* __________________________ */
 

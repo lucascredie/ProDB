@@ -55,5 +55,17 @@
 	</div>
 	
 	</div>
+	<% 
+	String[] diseaseCol = {"Symptoms", "Prognosis", "Treatment", "Description"};
+	for(int i = 1; i <= size; i++) { %>
+		<h2><%= results[i][1]%></h2>
+		<%for (int j = 2; j < 6; j++){ %>
+			<h4><%=diseaseCol[j-2] %></h4>
+			<div><%=results[i][j] %></div>
+			<hr>
+		<%} %>
+		<%} %>
+	
+	
 </body>
 </html>

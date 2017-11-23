@@ -2,17 +2,15 @@
 <%@ page import="javaProject.*" %>
 <%@ page import="java.sql.*" %>
 <%
- String proteinName = request.getParameter("searchQuery");
- ResultSet rs = Dbi.fetchProtein(proteinName);
+ String[][] results; 
  	try {
-	 	rs.last();
-	 	int size = rs.getRow();
-	 	rs.first();
-	 	String[][] results = new String[size][6];
-	 	for (int i = 0; i < results.length; i++){
-	 			
+	 	rsDisease.last();
+	 	int size = rsDisease.getRow();
+	 	rsDisease.first();
+	 	results = new String[size][6];
+	 	for (int i = 1 ; i < 6; i++){
+	 		results[rsDisease.getRow()][i] = rsDisease.getString(i);	
 	 	}
-	 	
 	 
 	} 
  	catch (SQLException e) {

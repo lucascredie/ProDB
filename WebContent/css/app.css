@@ -153,10 +153,13 @@ nav {
 /* ADDED */
 #proteinHeader {
 	text-transform: Uppercase;
-	text-align: center;
+	padding-left: 10px;
+	
 }
 
 .proteinHeaderHR {
+	text-align: left;
+	display: inline-block;
 	width: 320px;
 	border: 2px solid var(--main-grey);
 	
@@ -165,6 +168,10 @@ nav {
 	text-transform: capitalize;
 }
 
+#proteinStats h5 {
+	display: inline-block;
+	padding-right: 20px;
+}
 #sideBar {
     width: 350px;
     float: right;
@@ -175,7 +182,8 @@ nav {
     -webkit-box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
     -moz-box-shadow: -5px 0px 30px -9px rgba(151, 87, 87, 0.20);
     box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
-    /* border: 1px solid  rgba(0,0,0,0.30); */
+    border: 1px solid #393939; 
+  
 }
 #proteinWindow {
     display: block;
@@ -184,6 +192,7 @@ nav {
     margin-top: 20px;
     width: 100%;
     display: flex;
+    
 }
 .Button {
     width: 90%;
@@ -232,6 +241,7 @@ nav {
 }
 
 #sequenceBox {
+	border: 1px solid #393939; 
 	margin: 10px 0px;
 	width: 350px;
 	display: inline-block;
@@ -255,17 +265,28 @@ pre {
 }
 
 table {
-	border: solid;
+	width: 350px;
+	border: 1px solid #393939; 
+	text-align: center;
+	-webkit-box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
+    -moz-box-shadow: -5px 0px 30px -9px rgba(151, 87, 87, 0.20);
+    box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
+
 }
 tr {
-	border:solid;
+
 }
-th{
-	border:solid;
+#table {
+	width: 350px;
+	display: block;
+
 }
-td{
-	border:solid;
+tr:nth-child(even) {
+	/* border:solid; */
+	background: #f2f2f2;
+	
 }
+
 
 
 /* __________________________ */

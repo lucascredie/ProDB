@@ -50,13 +50,5 @@
 	</table>
 	
 	</div>
-	
-	
-	
-	
-	
-	
-	
-
 </body>
 </html>

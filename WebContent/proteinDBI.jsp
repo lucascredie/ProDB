@@ -28,9 +28,7 @@
 			 molWeight  = rs.getInt("mol_weight");
 			 type = rs.getString("type");
 			 geneLoc  = rs.getString("gene_loc");
-			 
 			 seq = rsSeq.getString("sequence");
-			 
 			 ProteinProcessor pp = new ProteinProcessor(seq);
 			 formattedSeq = pp.toString(); 
 			 residueCounts = pp.getResidueCounts();

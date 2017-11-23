@@ -14,8 +14,8 @@
 		String formattedSeq ="";
 		String[] aminoKeys = {"G","A","V","L","I","M","P","F","W","S","T","N","Q","Y","C","R","H"
 				,"K","E","D"};
-		String[] triletter = {"Gly (G)", "Ala (A)", "Val (V)","Lue (L)","Ile (I)","Met (M)","Pro (P)","Phe (F)","Trp (W)","Ser (S)","thr(t)","asn(n)","gln(q)","tyr(y)",
-				"cys(c)", "arg(r)", "his(h)", "lys(k)","asp(e)", "glu(d)"};
+		String[] triletter = {"Gly (G)", "Ala (A)", "Val (V)","Lue (L)","Ile (I)","Met (M)","Pro (P)","Phe (F)","Trp (W)","Ser (S)","Thr (T)","Asn (n)","Gln (Q)","Tyr (Y)",
+				"Cys (C)", "Arg (R)", "His (H)", "Lys (K)","Asp (E)", "Glu (D)"};
 
 		int[] residueCounts = new int[20];
 		int protlength = 0;

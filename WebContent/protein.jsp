@@ -1,10 +1,7 @@
-
 <%@ include file="head.jsp" %>  
 <%@ include file="proteinDBI.jsp"%>
 <body>
-
 <%@ include file="nav.html" %>   
-
 <h1 id="proteinHeader"><%=name %></h1>
 <hr class="proteinHeaderHR">
 	<div id="sideBar">

@@ -42,7 +42,7 @@ public class ProteinProcessor {
 				result += " ";
 				
 			}
-			if( i >= 60 && i%60 == 0) {
+			if( i >= 40 && i%40 == 0) {
 				result += "\n";
 			}
 			result += getKeyWhere(i);

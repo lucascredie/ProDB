@@ -18,7 +18,7 @@
 
 
         <div class="buttonBox">
-            <button class="Button">Kinetics</button>
+            <button class="Button" onclick="kinetics.jsp">Kinetics</button>
             <button class="Button">Pathogenicity</button>
         </div>
         

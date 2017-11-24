@@ -1,0 +1,6 @@
+UPDATE prot_db.enzyme SET cofactor_name = 'null', Km = 'null', Kcat = 'null', Vmax = 'null' WHERE prot_name = 'acetylcholinesterase' AND lig_name = 'acetylcholine' AND inhib_name = 'caffiene';
+UPDATE prot_db.enzyme SET cofactor_name = 'thrombomodulin', Km = 'null', Kcat = 'null', Vmax = 'null' WHERE prot_name = 'thrombin' AND lig_name = 'thrombis' AND inhib_name = 'heperin';
+UPDATE prot_db.enzyme SET cofactor_name = 'Zn2+', Km = 'null', Kcat = 'null', Vmax = 'null' WHERE prot_name = 'formaldehyde dismutase' AND lig_name = 'formaldehyde' AND inhib_name = 'null';
+UPDATE prot_db.enzyme SET cofactor_name = 'sphingomyelin', Km = 'null', Kcat = 'null', Vmax = 'null' WHERE prot_name = 'Lecithin–cholesterol acyltransferase' AND lig_name = 'null' AND inhib_name = 'null';
+UPDATE prot_db.enzyme SET cofactor_name = 'null', Km = 'null', Kcat = 'null', Vmax = 'null' WHERE prot_name = 'ATP Synthase' AND lig_name = 'adenosine triph' AND inhib_name = 'pyrazole';
+UPDATE prot_db.enzyme SET cofactor_name = 'null', Km = 'null', Kcat = 'null', Vmax = 'null' WHERE prot_name = 'serine racemase' AND lig_name = 'serine' AND inhib_name = 'malonate';

@@ -9,7 +9,7 @@ var indicesOfMatches = [];
 
 //-----------------------set handlers-------------------------//
 $(document).ready(function() {
-		seq = $("#inner-pre-text").text();//.replace(new RegExp(" ","g"), "");
+		seq = $("#inner-pre-text").text().replace(/ /gm, "").replace(/(\r\n|\n|\r)/gm,'');
 		$("#sequence-query").on("input propertychange", function(){
 			searchMotif = $("#sequence-query").val().toUpperCase();
 			if(searchMotif.length != 0){
@@ -31,38 +31,37 @@ function findInSequence() {
 	var beginMatch = 0;
 	var endMatch = 0;
 	var i = 0;
+	var specChar = RegExp('[X]');
+	var test = specChar.exec(searchMotif);
+	console.log(test);
+	var xs = [];
+	var generalCase = false;
+	var splitMotif = searchMotif.split("");
+	if (test != null && searchMotif.length >= 2){
+		
+		for (var i = 0; i < searchMotif.length; i++){
+			console.log("HI");
+			var char = searchMotif.charAt(i);
+			if(char == "X"){
+				xs.push(i);
+			}
+		}
+		generalCase = true;
+	}
 while (endMatch < seq.length){
 	endMatch = beginMatch + searchMotif.length;
 	var currentlyChecked = seq.substring(beginMatch, endMatch);
 	//check for spaces or new lines within the search portion of the sequence
-//console.log(searchMotif);
-//	if (currentlyChecked.length > 1){
-//		for (i = 0; i < currentlyChecked.length; i++){
-	if(currentlyChecked.length > 2){
-		var chars = currentlyChecked.split("");
-		console.log(chars);
+	if(generalCase){
+		var currCheckedSplit = currentlyChecked.split("");
+		//process out x's
+		for(var i = 0; i < splitMotif.length; i++){
+			if(xs[i] != null){
+			currCheckedSplit.splice(xs[i],1,"X");
+			}
+		}
+		currentlyChecked = currCheckedSplit.join("");
 	}
-//			if(chars[i] === " "){
-//				var splitter = searchMotif.split("");
-//				splitter.splice(i, 0, " ");
-//				searchMotif = splitter.join("");
-//				console.log(searchMotif);
-//			}
-//			else if (chars[i] === "\n") {
-//				var splitter = searchMotif.split("");
-//				splitter.splice(i, 0, "\n");
-//				searchMotif = splitter.join("");
-//				console.log(searchMotif);
-//			}
-//			
-//		}
-	//}
-	//
-//	var test = "ab c";
-//	var splt = test.split("");
-//	splt.splice(1, 0, " ")
-//	test = splt.join("")
-//	console.log(test);
 	if(currentlyChecked === searchMotif){
 		var indices = [beginMatch, endMatch];
 		indicesOfMatches.push(indices);
@@ -71,10 +70,10 @@ while (endMatch < seq.length){
 	else{
 		beginMatch++;
 	}
-	}
+	currentlyChecked = "";
+}
 	insertHighlightSpans();
 }
-
 function insertHighlightSpans(){
 	var spanOpen = "<span class=\"highlight-span\">";
 	var spanClose = "</span>";
@@ -91,6 +90,31 @@ function insertHighlightSpans(){
 			seqArray.splice(indicesOfMatches[i][1]+1, 0, spanClose);
 		}
 	}
+	var k = 0;
+	var j = 0;
+	while(k < seqArray.length) {
+		if( k >= 10 && k %10 == 0) {
+			if(seqArray[j] == spanOpen || seqArray[j]== spanClose){
+				seqArray.splice(j-1,0," ");
+			}
+			else{seqArray.splice(j,0," ");}
+
+			
+		}
+		if ( k >= 40 && k %40 == 0) {
+			if(seqArray[j] == spanOpen || seqArray[j]== spanClose){
+				seqArray.splice(j-1,0,"\n");
+			}
+			else{seqArray.splice(j,0,"\n");}
+			
+		}
+		if((seqArray[j] != spanOpen) && (seqArray[j] != spanClose)){
+			k++;
+		}
+		j++;
+		
+	}
+	console.log(seqArray.join(""));
 	$("#inner-pre-text").empty();
 	$("#inner-pre-text").html(seqArray.join(""));
 	indicesOfMatches = [];

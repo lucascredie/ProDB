@@ -73,6 +73,33 @@ public class Dbi {
 			}
 			
 		}
+		
+		public static boolean authenticateUser(String uname, String pwd) {
+			boolean res = true;
+			try {
+				String authQuery = "SELECT pwd FROM user_db.Users WHERE uname = ?";
+				dbconn = newConnection();
+				sql = dbconn.prepareStatement(authQuery);
+				sql.setString(1, uname);
+				ResultSet results = sql.executeQuery();
+				results.last();
+				int size = results.getRow();
+				results.first();
+				if (size == 0) {
+					res = false;
+				}
+				else {
+					String realpwd = results.getNString("pwd");
+					if ( pwd != realpwd) {
+						res = false;
+					}
+				}
+			} catch (Exception err) {
+				System.out.println("it is a database connection problem");
+				System.out.println(err.getMessage());
+			}
+			return res;
+		}
 
 	}
 

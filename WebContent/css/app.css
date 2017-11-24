@@ -245,11 +245,10 @@ nav {
 	-webkit-box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
     -moz-box-shadow: -5px 0px 30px -9px rgba(151, 87, 87, 0.20);
     box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
+    word-wrap: break-word;
 }
-
-pre {
-	/* margin: auto; */
-	
+code {
+	word-wrap: break-word;
 }
 
 .highlight-span {

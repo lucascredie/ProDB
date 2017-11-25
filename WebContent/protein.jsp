@@ -1,42 +1,40 @@
 <%@ include file="head.jsp" %>  
 <%@ include file="proteinDBI.jsp"%>
 <body>
-<%@ include file="nav.html" %>   
-<h1 id="proteinHeader"><%=name %></h1>
-<hr class="proteinHeaderHR">
+<%@ include file="nav.html" %>  
 
-<div id="proteinStats">
+ 
+
+
+<div id="proteinCard">
+
+	<h1 id="proteinHeader"><%=name %></h1>
+	<hr class="proteinHeaderHR">
+
+        <div id="proteinWindow" style="height: 250px; width: 100%; position: relative;" class='viewer_3Dmoljs' data-pdb='1SS8'  data-backgroundcolor='0xffffff' data-style='cartoon:color=spectrum'></div>
+
+	<div	 class="stats">
 		<h5>Localization: <%=local %></h5>
 		<h5>Molecular Weight: <%=molWeight %></h5>
 		<h5>Protein Type: <%=type %></h5>
 		<h5>Chromosomal Location: <%=geneLoc %></h5>
 	</div>
 	
-	<div id="sideBar">
-    
-        <div id="proteinWindow" style="height: 350px; width: 350px; position: relative;" class='viewer_3Dmoljs' data-pdb='1SS8'  data-backgroundcolor='0xffffff' data-style='cartoon:color=spectrum'></div>
-
-
-        <div class="buttonBox">
-            <button class="Button" onclick="kinetics.jsp">Kinetics</button>
-            <button class="Button">Pathogenicity</button>
-        </div>
-        
-    </div>  
-    
-
-    <div class="content">
- 
-    <div id="sequenceBox">
-    		<input type="text" id="sequence-query" placeholder="Find Motif..."><br>
-		<pre id="formatted-sequence"><code id="inner-pre-text"><%=formattedSeq%></code></pre> 
-		<input type="hidden" id="pretag-reset" value="<%=formattedSeq%>">
 	</div>
 	
+
+
+ 
+    		<div id="sequenceBox">
+    			<input type="text" id="sequence-query" placeholder="Find Motif..."><br>
+			<pre id="formatted-sequence"><code id="inner-pre-text"><%=formattedSeq%></code></pre> 
+			<input type="hidden" id="pretag-reset" value="<%=formattedSeq%>">
+		</div>
 	
 	
-	<div id="table">
-	<table>
+	
+		<div id="table">
+		<table>
 		<tr>
 			<th>Amino Acid</th>
 			<th>Count</th>
@@ -53,8 +51,9 @@
 		<% } %>
 	</table>
 	</div>
+
 	
-	</div>
+	<div id="diseaseView">
 	<% 
 	String[] diseaseCol = {"Symptoms", "Prognosis", "Treatment", "Description"};
 	for(int i = 1; i <= size; i++) { %>
@@ -65,7 +64,8 @@
 			<hr>
 		<%} %>
 		<%} %>
-	
+	</div>
 	
 </body>
+
 </html>

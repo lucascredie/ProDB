@@ -150,135 +150,91 @@ nav {
 
 /* _______PROTEIN PAGE_________ */
 
-/* ADDED */
+.content {
+	padding: 20px;
+
+}
+.highlight-span {
+	color: var(--main-red);
+}
+#proteinCard {
+	margin: 1%;
+	padding: 25px;
+	border: 1px solid rgba(150,150,150,1);
+	width: 340px;
+	color: #393939;
+	border-radius: 3px;
+	box-shadow: 
+    0px 12px 30px -15px rgba(0,0,0,0.4);
+    float: left;
+}
+
 #proteinHeader {
 	text-transform: Uppercase;
-	padding-left: 10px;
-	text-align: center;
+	margin: 0px 0px;
+	font-size: 22px;
 }
 
 .proteinHeaderHR {
-	
-	width: 370px;
-	border: 2px solid var(--main-grey);
-	margin-bottom: 30px;
-}
-#proteinStats {
-	text-transform: capitalize;
-	width: 350px;
-	margin: 0px auto;
-}
-
-#sideBar {
-    width: 350px;
-    /* background: red; */
-    margin: 0px auto;
-    padding: 15px;
-    -webkit-box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
-    -moz-box-shadow: -5px 0px 30px -9px rgba(151, 87, 87, 0.20);
-    box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
-    border: 1px solid #393939; 
-  
+	border: 1px solid rgba(250,150,150,0.5);
+	margin: 15px 0px 25px 0px;
 }
 
 #proteinWindow {
-    display: block;
+	border: 1px solid rgba(150,150,150,1);
 }
-.buttonBox {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    
-}
-.Button {
-    width: 90%;
-    margin: 0px 2px;
-    height: 50px;
-
-    transition: 200ms;
-    font-family: 'Lato', sans-serif;
-    text-transform: capitalize;
-    font-size: 1.1em;
-    background:var(--main-red); 
-    display: block;
-    border:0 none;
-    
-    cursor: pointer;
-    -webkit-border-radius: 2px;
-    border-radius: 2px; 
-
-    box-shadow: 0px 12px 30px -12px rgba(0,0,0,0.2);  
-}
-.Button:hover {
-   
-    background:var(--main-blue); 
-    color:white;
-    transition: 200ms;
-    transform: translateY(-3px);
-    
-}
-
-.content {
-	
-	
-}
-
-#sequence-query {
-	width: 60%;
-	height: 30px;
-	font-size: 1.2em;
-	display: block;
-	margin: 10px auto;
-	padding: 2px 15px;
-}
-
-#sequence-query:focus {
-	outline: none;
+.stats {
+	padding: 0px 5px;
 }
 
 #sequenceBox {
-	border: 1px solid #393939; 
-	margin: 10px auto;
-	width: 350px;
-	display: block;
-	padding: 10px;
-	-webkit-box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
-    -moz-box-shadow: -5px 0px 30px -9px rgba(151, 87, 87, 0.20);
-    box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
-    word-wrap: break-word;
-}
-code {
-	word-wrap: break-word;
-}
-
-.highlight-span {
-	color: var(--main-blue);
-	border-bottom: solid;
-	border-color: var(--main-blue);
-}
-
-table {
-	width: 350px;
-	border: 1px solid #393939; 
-	text-align: center;
-	-webkit-box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
-    -moz-box-shadow: -5px 0px 30px -9px rgba(151, 87, 87, 0.20);
-    box-shadow: -5px 0px 30px -9px rgba(0,0,0,0.20);
-
-}
-tr {
-
-}
-#table {
-	width: 350px;
-	display: block;
-	margin: 0px auto;
-
-}
-tr:nth-child(even) {
-	/* border:solid; */
-	background: #f2f2f2;
+	box-shadow: 
+    0px 12px 30px -15px rgba(0,0,0,0.4);
+    border-radius: 3px;
+	border: 1px solid rgba(150,150,150,1);
+	float: left;
 	
+	padding: 10px;
+	margin: 1%;
+}
+#sequence-query {
+	border: 1px solid rgba(150,150,150,1);
+	height: 30px;
+	display: block;
+	width: 60%;
+	font-size: 18px;
+	color: var(--main-blue);
+	transition: 300ms;
+}
+
+#sequence-query:focus {
+	border: 1px solid var(--main-blue);
+	outline: none;
+	transform:scale(1.02, 1.02);
+	transition: 300ms;
+}
+table {
+	border: 1px solid rgba(150,150,150,1);
+	box-shadow: 
+    0px 12px 30px -15px rgba(0,0,0,0.4);
+	padding: 10px;
+	margin: 1% auto;
+	border-radius: 3px;
+	
+}
+table:nth-child (even) {
+	background: red;
+}
+
+#diseaseView {
+	border-radius: 3px;
+	border: 1px solid rgba(150,150,150,1);
+	box-shadow: 
+    0px 12px 30px -15px rgba(0,0,0,0.4);
+	clear: both;
+	padding: 10px;
+	margin: 1%;
+
 }
 
 /* __________________________ */

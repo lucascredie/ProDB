@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/logo.css">
     <link rel="shortcut icon" href="images/favicon.png">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-grid.css"> -->
     <script src="http://cdn.jsdelivr.net/3dmol.js/latest/3Dmol-min.js"></script>
     <title>The Complete Protein Database</title>
 </head>

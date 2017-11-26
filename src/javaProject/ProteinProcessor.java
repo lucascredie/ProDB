@@ -29,8 +29,10 @@ public class ProteinProcessor {
 		
 		for (int i = 0; i < sequence.length; i++) {
 			//System.out.print(i + " ");
-			hm.get(sequence[i]).add(i);
-			seqlength++;
+			if(!sequence[i].equals(" ")) {
+				hm.get(sequence[i]).add(i);
+				seqlength++;
+			}
 		}
 		
 	}

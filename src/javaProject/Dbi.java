@@ -46,7 +46,7 @@ public class Dbi {
 		
 		public static  ResultSet fetchProteinSeq(String protName) {
 			try {
-				String selectProt = "SELECT sequence FROM prot_db.protein NATURAL JOIN prot_db.sequence WHERE name = ?";
+				String selectProt = "SELECT sequence FROM prot_db.sequence, prot_db.protein WHERE name = ? AND seq_id = id";
 				dbconn = newConnection();
 				sql = dbconn.prepareStatement(selectProt);
 				sql.setString(1, protName);

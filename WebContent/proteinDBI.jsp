@@ -17,6 +17,8 @@
 		String geneLoc = "";
 		String seq = "";
 		String formattedSeq ="";
+		String structurefile = "";
+		double ip = 0.0;
 		String[][] results = new String[11][6]; 
 		String[] aminoKeys = {"G","A","V","L","I","M","P","F","W","S","T","N","Q","Y","C","R","H"
 				,"K","E","D"};
@@ -37,11 +39,16 @@
 			 type = rs.getString("type");
 			 geneLoc  = rs.getString("gene_loc");
 			 seq = rsSeq.getString("sequence");
+			 System.out.println(seq);
+			 structurefile = rs.getString("3d_file");
+			 ip = rs.getDouble("iP");
+			 
 			 //
 			 //PROCESS PROTEIN DATA/ VARIABLES TO USE IN PAGE
 			 ProteinProcessor pp = new ProteinProcessor(seq);
 			 formattedSeq = pp.toString(); 
 			 residueCounts = pp.getResidueCounts();
+			 System.out.println(residueCounts);
 			 protlength = pp.getSeqLength();
 			 DecimalFormat df = new DecimalFormat("#0.00");
 			 for(int i = 0; i < residueCounts.length; i++){

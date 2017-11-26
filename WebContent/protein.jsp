@@ -17,6 +17,7 @@
 		<h5>Localization: <%=local %></h5>
 		<h5>Molecular Weight: <%=molWeight %></h5>
 		<h5>Protein Type: <%=type %></h5>
+		<h5>Encoding Gene: <%=gene %></h5>
 		<h5>Chromosomal Location: <%=geneLoc %></h5>
 		<h5>Theoretical pI: <%=ip %></h5>
 	</div>

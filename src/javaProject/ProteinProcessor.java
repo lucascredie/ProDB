@@ -26,7 +26,6 @@ public class ProteinProcessor {
 		hm.put("T", T); hm.put("N", N); hm.put("Q", Q); hm.put("Y", Y); hm.put("C", C);
 		hm.put("R", R); hm.put("H", H); hm.put("K", K); hm.put("E", E); hm.put("D", D);
 		String[] sequence = seq.toUpperCase().split("");
-		
 		for (int i = 0; i < sequence.length; i++) {
 			//System.out.print(i + " ");
 			if(!sequence[i].equals(" ")) {

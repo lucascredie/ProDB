@@ -19,10 +19,11 @@
 		String formattedSeq ="";
 		String structurefile = "";
 		double ip = 0.0;
+		String gene = "";
 		String[][] results = new String[11][6]; 
 		String[] aminoKeys = {"G","A","V","L","I","M","P","F","W","S","T","N","Q","Y","C","R","H"
 				,"K","E","D"};
-		String[] triletter = {"Gly (G)", "Ala (A)", "Val (V)","Lue (L)","Ile (I)","Met (M)","Pro (P)","Phe (F)","Trp (W)","Ser (S)","Thr (T)","Asn (n)","Gln (Q)","Tyr (Y)",
+		String[] triletter = {"Gly (G)", "Ala (A)", "Val (V)","Lue (L)","Ile (I)","Met (M)","Pro (P)","Phe (F)","Trp (W)","Ser (S)","Thr (T)","Asn (N)","Gln (Q)","Tyr (Y)",
 				"Cys (C)", "Arg (R)", "His (H)", "Lys (K)","Asp (E)", "Glu (D)"};
 		//
 		//PROCESS RESULTSET FOR PROTEIN
@@ -42,7 +43,7 @@
 			 System.out.println(seq);
 			 structurefile = rs.getString("3d_file");
 			 ip = rs.getDouble("iP");
-			 
+			 gene = rs.getString("gene");
 			 //
 			 //PROCESS PROTEIN DATA/ VARIABLES TO USE IN PAGE
 			 ProteinProcessor pp = new ProteinProcessor(seq);

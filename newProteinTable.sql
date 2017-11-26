@@ -55,7 +55,7 @@ SET 3d_file = '3HMK', iP = 5.28
 WHERE name = 'serine racemase';
 ####################################################################
 
-#############################SEQUENCE UPDATES########################
+#############################SEQUENCE UPDATES######################## !!!RUN THIS!!!
 UPDATE sequence
 SET sequence = 'maakevkfgdsarkkmlvgvnvladavkatlgpkgrnvvldksfgaptitkdgvsvakeielkdkfenmgaqlvkdvaskandeagdgtttatvlaqaivneglkavaagmnpmdlkrgidkatiaivaelkslakpcsdskaiaqvgtisansdesigniiaeamnkvgkegvitveegsglenelsvvegmqfdrgylspyfinkpdtmvaeldnpllllvdkkisnirellpvleavaksgrpllivaedvegealatlvvnnmrgivkvaavkapgfndrrkamlqviailtgatvisekvglslesatlehlgkpkalvlnkenttimhgagaqadieaavaqirkqieetssdydreklqerlaklaggvavikvgaatevemkekkarveaalhatraaveegvvpgggvalvralqaieglkgdnedqnvgiallrraveaplrqivanagdepsvvvdkvkqgsgnfgfnaasgvygdmiemgildpakvtrsalqaassigglmitteamvadivedkaapampdmggmggmggmm'
 WHERE id = 2;
@@ -100,3 +100,46 @@ UPDATE sequence
 SET sequence = 'mtalpfalnhmaapglpldaffalakslgisaveirndlsgnaildgtkpeevtalaekhgltivsinalqrfnewnqardaearelisyardcgaralvlvpvndgsgqkdgerqanlraalqalkplldaagiiglveplgfeicslrskteaaeaireiggetfrlvhdtfhhhlagedacfpdltglvhisgvsdeavavsemrdphrilvdaadrldnaaqirrlraegykgpfsfepfapsvhalsdpakairdsmdylqsrt'
 WHERE id = 12;
 #######################################################################################################
+
+#####################################MORE PROTEIN UPDATES################################# !!!RUN THIS!!!
+
+UPDATE protein
+SET gene = 'BCL11A'
+WHERE seq_id = 4;
+
+UPDATE protein
+SET gene = 'CHRNA4'
+WHERE seq_id = 5;
+
+UPDATE protein
+SET gene = 'F2'
+WHERE seq_id = 6;
+
+UPDATE protein
+SET gene = 'ITGB1'
+WHERE seq_id = 7;
+
+UPDATE protein
+SET gene = 'RHO'
+WHERE seq_id = 8;
+
+UPDATE protein
+SET gene = 'EC 1.2.98.1'
+WHERE seq_id = 9;
+
+UPDATE protein
+SET gene = 'EC 2.1.3.43'
+WHERE seq_id = 10;
+
+UPDATE protein
+SET gene = 'ATP5A1'
+WHERE seq_id = 11;
+
+UPDATE protein
+SET gene = 'SSR'
+WHERE seq_id = 12;
+
+############################################################################
+
+
+

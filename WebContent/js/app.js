@@ -92,6 +92,7 @@ function insertHighlightSpans(){
 	}
 	var k = 0;
 	var j = 0;
+	seqArray.splice(0,0," ");
 	while(k < seqArray.length) {
 		if( k >= 10 && k %10 == 0) {
 			if(seqArray[j] == spanOpen || seqArray[j]== spanClose){

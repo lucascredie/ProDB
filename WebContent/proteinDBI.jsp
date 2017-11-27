@@ -9,6 +9,7 @@
 	ResultSet rsSeq = Dbi.fetchProteinSeq(proteinName);
 	ResultSet rsDisease = Dbi.fetchDiseaseInfo(proteinName);
 	//
+	
 	//VARIABLES FOR PROTEIN NAMES
 		String name = "";
 		String local = "";
@@ -26,6 +27,7 @@
 		String[] triletter = {"Gly (G)", "Ala (A)", "Val (V)","Lue (L)","Ile (I)","Met (M)","Pro (P)","Phe (F)","Trp (W)","Ser (S)","Thr (T)","Asn (N)","Gln (Q)","Tyr (Y)",
 				"Cys (C)", "Arg (R)", "His (H)", "Lys (K)","Asp (E)", "Glu (D)"};
 		//
+		
 		//PROCESS RESULTSET FOR PROTEIN
 		int[] residueCounts = new int[20];
 		int protlength = 0;
@@ -45,6 +47,7 @@
 			 ip = rs.getDouble("iP");
 			 gene = rs.getString("gene");
 			 //
+			 
 			 //PROCESS PROTEIN DATA/ VARIABLES TO USE IN PAGE
 			 ProteinProcessor pp = new ProteinProcessor(seq);
 			 formattedSeq = pp.toString(); 

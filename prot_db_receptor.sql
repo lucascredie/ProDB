@@ -1,2 +1,0 @@
-UPDATE prot_db.receptor SET cofactor_name = 'null', pathway = 'parasympathetic', class = 'transmembrane' WHERE prot_name = 'nicotonic acetylcholine receptor' AND lig_name = 'nicotine';
-UPDATE prot_db.receptor SET cofactor_name = 'null', pathway = 'vision', class = 'G-coupled' WHERE prot_name = 'rhodopsin' AND lig_name = 'retinal';

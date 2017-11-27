@@ -11,7 +11,7 @@
         <p class="aboutParagraph">
             ProDB is an online application that aims to help Biology professors and students with protein related research.
         </p>
-        
+        <a id="gitLink" href="https://github.com/lucascredie/ProDB" target="_blank"> GitHub <span id="gitIcon" class="fa fa-github" ></span></a>
   		</div>
 
 </body>

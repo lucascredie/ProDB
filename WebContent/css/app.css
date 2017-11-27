@@ -421,3 +421,23 @@ label {
   border: 2px solid var(--main-blue);
   color: var(--main-blue);
 }
+#gitLink {
+	float: right;
+	display: inline-block;
+	color: var(--main-blue);
+	margin-bottom: 20px;
+	text-decoration: none;
+	color: var(--main-grey);
+	transition: 300ms;
+	transform: translateY(-5px);
+}
+
+#gitIcon {
+	font-size: 20px;
+	color: var(--main-blue);
+}
+#gitLink:hover {
+	transform: translateY(-10px);
+	transition: 300ms;
+}
+

@@ -1,4 +1,4 @@
-
+###DATABASE CREATE SCRIPT######
 CREATE TABLE protein
 (
     name varchar(50) PRIMARY KEY NOT NULL,

@@ -6,6 +6,8 @@
       
   	<div class="calculatorContainer">
   	
+  	<h1>Michaelis Menten Kinetics Calculator</h1>
+  	
   	<div id="VoCalc" class="calculator">
   
   <div class="solveFor">

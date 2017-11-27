@@ -4,7 +4,24 @@
 <%@ include file="nav.html" %>  
 
  
+<div id="proteinViewer" class="hide">
+            
+            <div id="proteinWindowViewer" style="height: 500px; width: 500px; position: relative;" class='viewer_3Dmoljs' data-pdb='<%=structurefile %>'  data-backgroundcolor='#1d1d1d' data-style='cartoon:color=spectrum'></div>
+            
+            <button class="toggleViewer collapse">X</button>
 
+        <div id="controls">
+                <h3 class="typeButtonsTitle">Change Type</h3>
+                    <button class="line typeButton">Line</button>
+                    <button class="stick typeButton">Stick</button>
+                    <button class="cartoon typeButton">3D Model</button>
+                    <button class="sphere typeButton">Sphere</button>
+                    <button class="cross typeButton">Cross</button>
+                
+        </div>
+</div>
+    
+    
 
 <div id="proteinCard">
 
@@ -14,6 +31,9 @@
         <div id="proteinWindow" style="height: 250px; width: 100%; position: relative;" class='viewer_3Dmoljs' data-pdb='<%=structurefile %>'  data-backgroundcolor='0xffffff' data-style='cartoon:color=spectrum'></div>
 
 	<div	 class="stats">
+	
+		<button class="toggleViewer launchButton">Launch Explorer</button>
+		
 		<h5>Localization: <%=local %></h5>
 		<h5>Molecular Weight: <%=molWeight %></h5>
 		<h5>Protein Type: <%=type %></h5>
@@ -69,5 +89,5 @@
 	</div>
 	
 </body>
-
+<script src="js/3dmol.js"></script>
 </html>

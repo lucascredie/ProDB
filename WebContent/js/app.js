@@ -16,6 +16,8 @@ $(document).ready(function() {
 				findInSequence()
 			}
 			else{
+				$("#motif-search-sum").html("");
+				$("#motif-search-loc").html("");
 				$("#inner-pre-text").empty();
 				$("#inner-pre-text").text($("#pretag-reset").val());
 			}
@@ -40,7 +42,6 @@ function findInSequence() {
 	if (test != null && searchMotif.length >= 2){
 		
 		for (var i = 0; i < searchMotif.length; i++){
-			console.log("HI");
 			var char = searchMotif.charAt(i);
 			if(char == "X"){
 				xs.push(i);
@@ -117,6 +118,13 @@ function insertHighlightSpans(){
 	}
 	console.log(seqArray.join(""));
 	$("#inner-pre-text").empty();
+	$("#motif-search-sum").html(indicesOfMatches.length);
+	var locToString = "";
+	for (var i =0; i < indicesOfMatches.length; i++){
+		
+		locToString += (indicesOfMatches[i][0] + 1) + ' ';
+	}
+	$("#motif-search-loc").html(locToString);
 	$("#inner-pre-text").html(seqArray.join(""));
 	indicesOfMatches = [];
 

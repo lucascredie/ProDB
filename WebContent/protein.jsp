@@ -49,6 +49,10 @@
  
     		<div id="sequenceBox">
     			<input type="text" id="sequence-query" placeholder="Find Motif..."><br>
+    			<div id = "searchResultsWrap">
+	    			Matches: <h6 id="motif-search-sum"></h6>         
+	    			Locations: <h6 id="motif-search-loc"></h6>
+    			</div>
 			<pre id="formatted-sequence"><code id="inner-pre-text"><%=formattedSeq%></code></pre> 
 			<input type="hidden" id="pretag-reset" value="<%=formattedSeq%>">
 		</div>

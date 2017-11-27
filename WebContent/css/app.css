@@ -362,6 +362,11 @@ table:nth-child (even) {
 	background: #fff455;
 }
 
+#searchResultsWrap{
+	text-align: center;
+	
+}
+
 /*  
 					<button class="line typeButton">Line</button>
                     <button class="stick typeButton">Stick</button>

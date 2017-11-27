@@ -366,11 +366,58 @@ table:nth-child (even) {
 	text-align: center;
 	
 }
+/* CALCULATOR */
+.calculatorContainer {
+	padding: 25px;
+	text-align: center;
+	
+}
+#dropDown {
+  height: 20px;
+  
+}
 
-/*  
-					<button class="line typeButton">Line</button>
-                    <button class="stick typeButton">Stick</button>
-                    <button class="cartoon typeButton">Cartoon</button>
-                    <button class="sphere typeButton">Sphere</button>
-                    <button class="cross typeButton">Cross</button>
-*/
+.solveFor {
+  margin: 50px 0px;
+}
+
+#subTitle {
+  display: inline-block;
+}
+
+#dropDown {
+  
+}
+
+.variable {
+  border: 1px solid #eeeeee;
+  height: 50px;
+  width: 120px;
+  font-size: 25px;
+  transition: 300ms;
+  font-weight: 200;
+  box-shadow: 0px 7px 36px -9px rgba(0,0,0,0.25);
+}
+
+.variable:focus {
+  outline: none;
+  transform: scale(1.05,1.05);
+  transition: 300ms;
+   box-shadow: 0px 7px 70px -12px rgba(0,0,0,0.25);
+}
+
+.variable:hover {
+  transform: scale(1.05,1.05);
+  transition: 300ms;
+   box-shadow: 0px 7px 70px -12px rgba(0,0,0,0.25);
+}
+
+label {
+  font-size: 40px;
+  font-weight: 900;
+  color: #424242;
+}
+.selected {
+  border: 2px solid var(--main-blue);
+  color: var(--main-blue);
+}
